@@ -1,22 +1,58 @@
-def LinearSearchAllKeys(myList, keyItem):
-    indList=[]
-    for i in range(len(myList)):
-      if myList[i] == keyItem:
-         indList.append(i)
-    
-    return indList
+def BinarySearch(myList, keyItem):
+    L=0
+    R=len(myList)-1
+    keyFound=False
 
-numbers=[40,17,62,90,10,17,11,80,25,17]
+    while (L<=R) and (keyFound==False):
+        m=(L+R)//2
+        
+        if myList[m]==keyItem:
+            keyFound=True
+        elif myList[m]>keyItem:
+            R=m-1
+        else:
+            L=m+1
+        
+    if keyFound:
+        return m
+    else:
+        return -1
+
+
+numbers=[2,5,9,12,17,18,21,32]
 key1=17
 key2=29
-indKey1=LinearSearchAllKeys(numbers, key1)
-indKey2=LinearSearchAllKeys(numbers, key2)
+indKey1=BinarySearch(numbers, key1)
+indKey2=BinarySearch(numbers, key2)
 
 for indKey in (indKey1,indKey2):
-    if len (indKey)!=0:
+    if indKey!=-1:
         print(indKey)
     else:
         print("Search failed")
+
+
+
+# def new_func():
+#     def LinearSearchAllKeys(myList, keyItem):
+#         indList=[]
+#         for i in range(len(myList)):
+#           if myList[i] == keyItem:
+#              indList.append(i)
+    
+#         return indList
+
+#     numbers=[40,17,62,90,10,17,11,80,25,17]
+#     key1=17
+#     key2=29
+#     indKey1=LinearSearchAllKeys(numbers, key1)
+#     indKey2=LinearSearchAllKeys(numbers, key2)
+
+#     for indKey in (indKey1,indKey2):
+#         if len (indKey)!=0:
+#             print(indKey)
+#         else:
+#             print("Search failed")
 
 
 
@@ -206,4 +242,6 @@ for indKey in (indKey1,indKey2):
 #             if myList[j]<myList[j+1]:
 #                 temp=myList[j]
 #                 myList[j]=myList[j+1]
-#                 myList[j+1]=temp """
+    #                 myList[j+1]=temp """
+
+
