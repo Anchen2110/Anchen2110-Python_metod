@@ -1,57 +1,93 @@
-def QuickSort (myList):
-    if len(myList) == 1:
-        return myList
-    elif len(myList) > 1:
-        # midInd  = len(myList)//2
-        # print("midInd : {}, mid elem={}".format(midInd,myList[midInd]))
+def LinearSearchAllKeys(myList, keyItem):
+    indList=[]
+    for i in range(len(myList)):
+      if myList[i] == keyItem:
+         indList.append(i)
+    
+    return indList
 
-        firstInd =0
-        lastInd=len(myList)-1
+numbers=[40,17,62,90,10,17,11,80,25,17]
+key1=17
+key2=29
+indKey1=LinearSearchAllKeys(numbers, key1)
+indKey2=LinearSearchAllKeys(numbers, key2)
 
-        midInd  = (firstInd+lastInd)//2
-        print("midInd : {}, mid elem={}".format(midInd,myList[midInd]))
+for indKey in (indKey1,indKey2):
+    if len (indKey)!=0:
+        print(indKey)
+    else:
+        print("Search failed")
 
 
-        leftPart = myList[:midInd+1]
-        rightPart = myList[midInd+1:]
-        print("current list before: {}".format(myList))
-        print("left before: {}".format(leftPart))
-        print("right before: {}".format(rightPart))
 
-        while True:
-            while myList[firstInd]<myList[midInd]:
-                firstInd+=1
-            while myList[lastInd]>myList[midInd]:
-                lastInd-=1
-            if firstInd<lastInd:
-                temp=myList[firstInd]
-                myList[firstInd]=myList[lastInd]
-                myList[lastInd]=temp
 
-                firstInd+=1
-                lastInd-=1
-            if firstInd>=lastInd:
-                break
-        print("current list after: {}".format(myList))
-        leftPart = myList[:midInd+1]
-        rightPart = myList[midInd+1:]
-        print("left after: {}".format(leftPart))
-        print("right after: {}".format(rightPart))
+# def LinearSearch(myList, keyItem):
+#    for i in range(len(myList)):
+#       if myList[i] == keyItem:
+#          return i
+#    return -1
 
-        QuickSort (leftPart)
-        QuickSort (rightPart)
+# numbers=[40,62,90,10,17,11,80,25]
+# print("Original list: {}".format(numbers))
 
-        myList=leftPart+rightPart
+# key1=17
+# print("Key element {} is in List in {} posotion".format(key1,LinearSearch(numbers, key1)))
+
+# key2=29
+# print("Key element {} is in List in {} posotion".format(key2,LinearSearch(numbers, key2)))
+
+
+# def QuickSort (myList):
+#     if len(myList) == 1:
+#         return myList
+#     elif len(myList) > 1:
+#         firstInd =0
+#         lastInd=len(myList)-1
+
+#         midInd  = (firstInd+lastInd)//2
+#         print("midInd : {}, mid elem={}".format(midInd,myList[midInd]))
+
+
+#         leftPart = myList[:midInd+1]
+#         rightPart = myList[midInd+1:]
+#         print("current list before: {}".format(myList))
+#         print("left before: {}".format(leftPart))
+#         print("right before: {}".format(rightPart))
+
+#         while True:
+#             while myList[firstInd]<myList[midInd]:
+#                 firstInd+=1
+#             while myList[lastInd]>myList[midInd]:
+#                 lastInd-=1
+#             if firstInd<lastInd:
+#                 temp=myList[firstInd]
+#                 myList[firstInd]=myList[lastInd]
+#                 myList[lastInd]=temp
+
+#                 firstInd+=1
+#                 lastInd-=1
+#             if firstInd>=lastInd:
+#                 break
+#         print("current list after: {}".format(myList))
+#         leftPart = myList[:midInd+1]
+#         rightPart = myList[midInd+1:]
+#         print("left after: {}".format(leftPart))
+#         print("right after: {}".format(rightPart))
+
+#         QuickSort (leftPart)
+#         QuickSort (rightPart)
+
+#         myList=leftPart+rightPart
         
-        return myList
+#         return myList
 
 
 
-numbers=[12,8,25,17,33,31,40,42]
-print("Original list: {}".format(numbers))
+# numbers=[12,8,25,17,33,31,40,42]
+# print("Original list: {}".format(numbers))
 
 
-print("Sorted list: {}".format(QuickSort(numbers)))
+# print("Sorted list: {}".format(QuickSort(numbers)))
 
 
 
