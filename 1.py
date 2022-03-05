@@ -1,35 +1,35 @@
-def BinarySearch(myList, keyItem):
-    L=0
-    R=len(myList)-1
-    keyFound=False
+# def BinarySearch(myList, keyItem):
+#     L=0
+#     R=len(myList)-1
+#     keyFound=False
 
-    while (L<=R) and (keyFound==False):
-        m=(L+R)//2
+#     while (L<=R) and (keyFound==False):
+#         m=(L+R)//2
         
-        if myList[m]==keyItem:
-            keyFound=True
-        elif myList[m]>keyItem:
-            R=m-1
-        else:
-            L=m+1
+#         if myList[m]==keyItem:
+#             keyFound=True
+#         elif myList[m]>keyItem:
+#             R=m-1
+#         else:
+#             L=m+1
         
-    if keyFound:
-        return m
-    else:
-        return -1
+#     if keyFound:
+#         return m
+#     else:
+#         return -1
 
 
-numbers=[2,5,9,12,17,18,21,32]
-key1=17
-key2=29
-indKey1=BinarySearch(numbers, key1)
-indKey2=BinarySearch(numbers, key2)
+# numbers=[2,5,9,12,17,18,21,32]
+# key1=17
+# key2=29
+# indKey1=BinarySearch(numbers, key1)
+# indKey2=BinarySearch(numbers, key2)
 
-for indKey in (indKey1,indKey2):
-    if indKey!=-1:
-        print(indKey)
-    else:
-        print("Search failed")
+# for indKey in (indKey1,indKey2):
+#     if indKey!=-1:
+#         print(indKey)
+#     else:
+#         print("Item is not found")
 
 
 
@@ -67,10 +67,10 @@ for indKey in (indKey1,indKey2):
 # print("Original list: {}".format(numbers))
 
 # key1=17
-# print("Key element {} is in List in {} posotion".format(key1,LinearSearch(numbers, key1)))
+# print("Key element {} is in List in {} position".format(key1,LinearSearch(numbers, key1)))
 
 # key2=29
-# print("Key element {} is in List in {} posotion".format(key2,LinearSearch(numbers, key2)))
+# print("Key element {} is in List in {} position".format(key2,LinearSearch(numbers, key2)))
 
 
 # def QuickSort (myList):
@@ -225,23 +225,28 @@ for indKey in (indKey1,indKey2):
 #         if sortedFlag:
 #             break
 
-# def printList(myList):
-#     for index, elem in enumerate(myList):
-#         print("elemen {}: {}".format(index+1, elem))
+numbers=[5,2,4,7,6]
 
-# print("Original list:")
-# printList(numbers)
-# myBubbleSort(numbers)
-# print("Sorted list:")
-# printList(numbers)
+def myBubbleSort(myList):
+    for i in range(len(myList)-1):
+        for j in range(len(myList)-i-1):
+            if myList[j]<myList[j+1]:
+                temp=myList[j]
+                myList[j]=myList[j+1]
+                myList[j+1]=temp
 
 
-# """ def myBubbleSort(myList):
-#     for i in range(len(myList)-1):
-#         for j in range(len(myList)-i-1):
-#             if myList[j]<myList[j+1]:
-#                 temp=myList[j]
-#                 myList[j]=myList[j+1]
-    #                 myList[j+1]=temp """
+def printList(myList):
+    for index, elem in enumerate(myList):
+        print("element {}: {}".format(index+1, elem))
+
+print("Original list:")
+printList(numbers)
+myBubbleSort(numbers)
+print("Sorted list:")
+printList(numbers)
+
+
+
 
 
