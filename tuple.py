@@ -1,6 +1,6 @@
-userTypes=('admin','student','teacher','moderator', 'admin')
-if 'student' in userTypes:
-    print('student is correct login' )
+# userTypes=('admin','student','teacher','moderator', 'admin')
+# if 'student' in userTypes:
+#     print('student is correct login' )
 #333
 
 
@@ -35,21 +35,36 @@ if 'student' in userTypes:
 # userTypes2=('user1','user2')
 
 # allUsers=userTypes1+userTypes2
+# for user in allUsers:
+#     print(user)
+
+# userTypes=('admin','student','teacher','moderator', 'admin')
+# print(userTypes.count('admin'))  #2
 
 # userTypes=('admin','student','teacher','moderator', 'admin')
 # print(userTypes.index('admin')) #0
 
-#print(userTypes.count('admin'))  #2
 
-#userTypes=('admin','student','teacher','moderator')
+# userTypes=('admin','student','teacher','moderator')
 # for user in userTypes*2:
 #     print(user)
 
+# userTypes=('admin','student','teacher','moderator')
 # for i in range(len(userTypes)):
 #     print(userTypes[i])
 
+
+# userTypes=('admin','student','teacher','moderator')
 # for user in userTypes:
 #     print(user)
+# userTypes=('admin','student','teacher','moderator')
+
+# user1, *users =userTypes
+# print(user1) #admin
+# print(users) #['student', 'teacher', 'moderator']
+
+
+# userTypes=('admin','student','teacher','moderator')
 
 # firstUser, *users, lastUser =userTypes
 # print(firstUser) #admin
@@ -57,12 +72,16 @@ if 'student' in userTypes:
 # print(lastUser) #moderator
 # print(user1) #admin
 # print(users) #['student', 'teacher', 'moderator']
+# userTypes=('admin','student','teacher','moderator')
 # user1, user2,user3,user4 =userTypes
 # print(user1)  #admin 
 # print(user2)  #student 
 # print(user3)  #teacher 
 # print(user4)  #moderator 
 
+
+# userTypes=('admin','student','teacher','moderator')
+# userTypes[0]='user'
 
 
 # print("1st user:", userTypes[0])
