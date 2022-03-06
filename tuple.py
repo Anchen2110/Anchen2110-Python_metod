@@ -1,3 +1,10 @@
+userTypes=('admin','student','teacher','moderator', 'admin')
+if 'student' in userTypes:
+    print('student is correct login' )
+
+
+
+
 # myEmptyTuple1=()
 # myEmptyTuple2= tuple()
 
@@ -28,8 +35,8 @@
 
 # allUsers=userTypes1+userTypes2
 
-userTypes=('admin','student','teacher','moderator', 'admin')
-print(userTypes.index('admin')) #0
+# userTypes=('admin','student','teacher','moderator', 'admin')
+# print(userTypes.index('admin')) #0
 
 #print(userTypes.count('admin'))  #2
 
