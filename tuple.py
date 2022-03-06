@@ -23,12 +23,37 @@
 # namesTuple = tuple(('Alex', 'Helen'))
 # print(namesTuple) #('Alex', 'Helen')
 
-userTypes=('admin','student','teacher','moderator')
-user1, user2,user3,user4 =userTypes
-print(user1)
-print(user2)
-print(user1)
-print(user1)
+# userTypes1=('admin','student','teacher','moderator')
+# userTypes2=('user1','user2')
+
+# allUsers=userTypes1+userTypes2
+
+userTypes=('admin','student','teacher','moderator', 'admin')
+print(userTypes.index('admin')) #0
+
+#print(userTypes.count('admin'))  #2
+
+#userTypes=('admin','student','teacher','moderator')
+# for user in userTypes*2:
+#     print(user)
+
+# for i in range(len(userTypes)):
+#     print(userTypes[i])
+
+# for user in userTypes:
+#     print(user)
+
+# firstUser, *users, lastUser =userTypes
+# print(firstUser) #admin
+# print(users) #['student', 'teacher']
+# print(lastUser) #moderator
+# print(user1) #admin
+# print(users) #['student', 'teacher', 'moderator']
+# user1, user2,user3,user4 =userTypes
+# print(user1)  #admin 
+# print(user2)  #student 
+# print(user3)  #teacher 
+# print(user4)  #moderator 
 
 
 
