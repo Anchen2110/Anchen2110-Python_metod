@@ -7,5 +7,5 @@ print("mySet2 - set of strings:",mySet2)
 print("mySet3 - of mixed datatypes:",mySet3)
 
 mySet4=set((10,20,30))
-print("mySet4:",mySet4) #
+print("mySet4:",mySet4) #{10, 20, 30}
 
