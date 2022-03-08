@@ -1,19 +1,59 @@
-studGroup1={'Hanna','Joe','Kate'}
-studGroup2={'Bob','Joe','Jane','Kate','Jack'}
-print("studGroup1:",studGroup1)
-print("studGroup2:",studGroup2)
 
-print("Intersection of sets:")
-print(studGroup1&studGroup2) #
-print(studGroup1.intersection(studGroup2))
+frozenA = frozenset(['Hanna','Joe','Kate'])
+frozenB = frozenset(['Bob','Joe','Jane','Kate','Jack'])
 
-print("Union of sets:")
-print(studGroup1|studGroup2) #
-print(studGroup1.union(studGroup2))
+# print("frozenA:",frozenA)
+# print("frozenB:",frozenB)
 
-print("Difference of two sets:")
-print(studGroup2-studGroup1) #
-print(studGroup2.difference(studGroup1))
+# print("Intersection of frozensets:")
+# print(frozenA&frozenB) 
+# print(frozenA.intersection(frozenB))
+
+# print("Union of frozensets:")
+# print(frozenA|frozenB) 
+# print(frozenA.union(frozenB))
+
+# print("Difference of two frozensets:")
+# print(frozenB-frozenA) 
+# print(frozenB.difference(frozenA))
+# frozenA.add('user')
+
+frozenB.remove('Bob')
+
+
+
+# scores={1,2,3,4,5,6,7,8,9,10,11,12}
+
+# print("Min score is", min(scores))
+# print("Max score is", max(scores))
+# print("Sum of scores:", sum(scores))
+
+
+
+# studSet={'Bob','Joe','Jane','Kate','Jack'}
+
+# print("We have {} students in our group.".format(len(studSet)))
+# for ind,item in enumerate(studSet):
+#     print(ind,item)
+
+
+
+# studGroup1={'Hanna','Joe','Kate'}
+# studGroup2={'Bob','Joe','Jane','Kate','Jack'}
+# print("studGroup1:",studGroup1)
+# print("studGroup2:",studGroup2)
+
+# print("Intersection of sets:")
+# print(studGroup1&studGroup2) #
+# print(studGroup1.intersection(studGroup2))
+
+# print("Union of sets:")
+# print(studGroup1|studGroup2) #
+# print(studGroup1.union(studGroup2))
+
+# print("Difference of two sets:")
+# print(studGroup2-studGroup1) #
+# print(studGroup2.difference(studGroup1))
 
 
 # mySet = {1, 2, 3, 4, 5}
