@@ -1,6 +1,28 @@
+usersApp1=['user134','admin56','superBob','student','spider34']
+usersApp2=['fifa56','user134','studGood','admin56','spider34']
 
-frozenA = frozenset(['Hanna','Joe','Kate'])
-frozenB = frozenset(['Bob','Joe','Jane','Kate','Jack'])
+print("App1+App2 users:")
+print(set(usersApp1)&set(usersApp2))
+
+print("App1 users only:")
+print(set(usersApp1)-set(usersApp2))
+
+print("App2 users only:")
+print(set(usersApp2)-set(usersApp1))
+
+print("All users:")
+print(set(usersApp1)|set(usersApp2))
+
+
+
+# allPizzaTypes=['Veggie','Pepperoni','Meat','Margherita','Meat','BBQ Chicken','Hawaiian','Veggie']
+
+# uniquePizzaTypes=list(set(allPizzaTypes))
+# print(uniquePizzaTypes) 
+#['BBQ Chicken', 'Veggie', 'Meat', 'Margherita', 'Hawaiian', 'Pepperoni']
+
+# frozenA = frozenset(['Hanna','Joe','Kate'])
+# frozenB = frozenset(['Bob','Joe','Jane','Kate','Jack'])
 
 # print("frozenA:",frozenA)
 # print("frozenB:",frozenB)
@@ -18,7 +40,7 @@ frozenB = frozenset(['Bob','Joe','Jane','Kate','Jack'])
 # print(frozenB.difference(frozenA))
 # frozenA.add('user')
 
-frozenB.remove('Bob')
+# frozenB.remove('Bob')
 
 
 
