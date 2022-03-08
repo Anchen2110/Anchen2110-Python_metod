@@ -1,17 +1,25 @@
-usersApp1=['user134','admin56','superBob','student','spider34']
-usersApp2=['fifa56','user134','studGood','admin56','spider34']
+word1=input("1st word:")
+word2=input("2nd word:")
 
-print("App1+App2 users:")
-print(set(usersApp1)&set(usersApp2))
+if set(word1)==set(word2):
+    print("Yes")
+else:
+    print("No")
 
-print("App1 users only:")
-print(set(usersApp1)-set(usersApp2))
+# usersApp1=['user134','admin56','superBob','student','spider34']
+# usersApp2=['fifa56','user134','studGood','admin56','spider34']
 
-print("App2 users only:")
-print(set(usersApp2)-set(usersApp1))
+# print("App1+App2 users:")
+# print(set(usersApp1)&set(usersApp2))
 
-print("All users:")
-print(set(usersApp1)|set(usersApp2))
+# print("App1 users only:")
+# print(set(usersApp1)-set(usersApp2))
+
+# print("App2 users only:")
+# print(set(usersApp2)-set(usersApp1))
+
+# print("All users:")
+# print(set(usersApp1)|set(usersApp2))
 
 
 
