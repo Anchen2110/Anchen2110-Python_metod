@@ -1,3 +1,19 @@
+studGroup1={'Hanna','Joe','Kate'}
+studGroup2={'Bob','Joe','Jane','Kate','Jack'}
+print("studGroup1:",studGroup1)
+print("studGroup2:",studGroup2)
+
+print("Intersection of sets:")
+print(studGroup1&studGroup2) #
+print(studGroup1.intersection(studGroup2))
+
+print("Union of sets:")
+print(studGroup1|studGroup2) #
+print(studGroup1.union(studGroup2))
+
+print("Difference of two sets:")
+print(studGroup2-studGroup1) #
+print(studGroup2.difference(studGroup1))
 
 
 # mySet = {1, 2, 3, 4, 5}
