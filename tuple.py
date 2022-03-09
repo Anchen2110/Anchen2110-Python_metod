@@ -9,8 +9,31 @@ def askPersonalInfo():
         else:
             return firstName,lastName,yearBirth,gender
 
-personalInfo=askPersonalInfo()
-print(personalInfo)
+def askHobby():
+    hobbyInd=1
+    hobbyList=[]
+    while True:
+        hobbyName=input("Your hobby {} name:".format(hobbyInd))
+        if hobbyName=="":
+            print("No info. Stop input")
+            break
+        else:
+            hobbyList.append(hobbyName)
+            hobbyInd+=1
+    if len(hobbyList)>0:
+        print("You have {} hobbies.".format(hobbyInd-1))
+    
+    else:
+        print("You have no hobbies at all")
+
+    return hobbyList
+
+
+
+#personalInfo=askPersonalInfo()
+hobbyInfo=askHobby()
+print(hobbyInfo)
+#print(personalInfo)
 
 
 # userTypes=('admin','student','teacher','moderator', 'admin')
