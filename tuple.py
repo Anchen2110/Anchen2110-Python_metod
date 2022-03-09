@@ -1,3 +1,18 @@
+def askPersonalInfo():
+    while True:
+        firstName=input("Your first name:")
+        lastName=input("Your last name:")
+        yearBirth=input("Your year of birth:")
+        gender=input("Your gender (M,F):")
+        if firstName=="" or lastName=="" or yearBirth=="" or gender=="" or gender not in ('F','M'):
+            print("Wrong data!")
+        else:
+            return firstName,lastName,yearBirth,gender
+
+personalInfo=askPersonalInfo()
+print(personalInfo)
+
+
 # userTypes=('admin','student','teacher','moderator', 'admin')
 # if 'student' in userTypes:
 #     print('student is correct login' )
