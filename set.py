@@ -1,10 +1,10 @@
-word1=input("1st word:")
-word2=input("2nd word:")
+# word1=input("1st word:")
+# word2=input("2nd word:")
 
-if set(word1)==set(word2):
-    print("Yes")
-else:
-    print("No")
+# if set(word1)==set(word2):
+#     print("Yes")
+# else:
+#     print("No")
 
 # usersApp1=['user134','admin56','superBob','student','spider34']
 # usersApp2=['fifa56','user134','studGood','admin56','spider34']
@@ -27,7 +27,7 @@ else:
 
 # uniquePizzaTypes=list(set(allPizzaTypes))
 # print(uniquePizzaTypes) 
-#['BBQ Chicken', 'Veggie', 'Meat', 'Margherita', 'Hawaiian', 'Pepperoni']
+# ['BBQ Chicken', 'Veggie', 'Meat', 'Margherita', 'Hawaiian', 'Pepperoni']
 
 # frozenA = frozenset(['Hanna','Joe','Kate'])
 # frozenB = frozenset(['Bob','Joe','Jane','Kate','Jack'])
@@ -153,7 +153,7 @@ else:
 # uniqueUsersName=set(allUsersName)
 # print(uniqueUsersName) #{'Kate', 'Joe', 'Bob'}
 
-# #passwordsSet={'111',['222','333']}
+# passwordsSet={'111',['222','333']}
 
 # myEmptySet=set()
 # print(myEmptySet) #set()
