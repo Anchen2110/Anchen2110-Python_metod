@@ -9,30 +9,36 @@ def askPersonalInfo():
         else:
             return firstName,lastName,yearBirth,gender
 
-def askHobby():
-    hobbyInd=1
-    hobbyList=[]
+def askAdditionalInfo(queryStr):
+    infoInd=1
+    infoList=[]
     while True:
-        hobbyName=input("Your hobby {} name:".format(hobbyInd))
-        if hobbyName=="":
+        infoName=input("Your {} {} name:".format(queryStr,infoInd))
+        if infoName=="":
             print("No info. Stop input")
             break
         else:
-            hobbyList.append(hobbyName)
-            hobbyInd+=1
-    if len(hobbyList)>0:
-        print("You have {} hobbies.".format(hobbyInd-1))
+            infoList.append(infoName)
+            infoInd+=1
+    if len(infoList)>0:
+        if queryStr=='hobby':
+            print("You have {} hobbies.".format(infoInd-1))
+        elif queryStr=='programming languages':
+            print("You know {} programming languages.".format(infoInd-1))
     
     else:
-        print("You have no hobbies at all")
+        print("You have no info at all")
 
-    return hobbyList
+    return infoList
 
 
+userInfo=[]
+userInfo.append(askPersonalInfo())
+userInfo.append(askAdditionalInfo('hobby'))
+userInfo.append(askAdditionalInfo('programming languages'))
 
-#personalInfo=askPersonalInfo()
-hobbyInfo=askHobby()
-print(hobbyInfo)
+print(userInfo)
+
 #print(personalInfo)
 
 
