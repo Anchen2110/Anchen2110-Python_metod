@@ -41,6 +41,8 @@
 
 
 
+
+
 # print(bookDict.keys())
 # #dict_keys(['author', 'title', 'price', 'reading age', 'language'])
 
@@ -56,13 +58,13 @@
 
 
 
-# # print(bookDict)
+# print(bookDict)
 
-# # bookDict.update([('pages', 600), ('discount', True)])
-# # print(bookDict)
+# bookDict.update([('pages', 600), ('discount', True)])
+# print(bookDict)
 
-# # bookDict.update([['pages', 700], ('online', False)])
-# # print(bookDict)
+# bookDict.update([['pages', 700], ('online', False)])
+# print(bookDict)
 
 
 # studGr1={'Joe':75,'Bob':92}
