@@ -12,12 +12,12 @@ def myGreeting4():
 
 myGreetingsList=(myGreeting1,myGreeting2,myGreeting3,myGreeting4)
 
-# def getGreetingRecipient():
-#     greetRecipient=input("name?")
-#     print("Dear, ", greetRecipient)
+def getGreetingRecipient():
+    greetRecipient=input("name?")
+    print("Dear, ", greetRecipient)
 
-# def sayHello(getRecipientFunction):
-#     getRecipientFunction()
+def sayHello(getRecipientFunction):
+    getRecipientFunction()
 
 
 
@@ -52,11 +52,11 @@ for i in range(3):
 
     
 
-# for myGreeting in myGreetingsList:
-#     greetingRecipient(myGreeting)
+for myGreeting in myGreetingsList:
+    greetingRecipient(myGreeting)
 
 
 
 
-# sayGoodMorning=myGreeting1
-# sayGoodMorning()
+sayGoodMorning=myGreeting1
+sayGoodMorning()

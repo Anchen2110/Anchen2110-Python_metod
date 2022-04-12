@@ -1,9 +1,9 @@
-# bookDict={'author':'Eric Matthes',
-#         'title':'Python Crash Course',
-#         'price':14.43,
-#         'reading age':'12 years and up',
-#         'language':'English'
-#         }
+bookDict={'author':'Eric Matthes',
+        'title':'Python Crash Course',
+        'price':14.43,
+        'reading age':'12 years and up',
+        'language':'English'
+        }
 
 # for dictKey, dicVal in bookDict.items():
 #         print("{}:{}".format(dictKey,dicVal))
@@ -21,8 +21,9 @@
 # for dictKey in bookDict:
 #         print("{}:{}".format(dictKey,bookDict[dictKey]))
 
-# for dictKey in bookDict:
-#         print(bookDict[dictKey])
+for dictKey in bookDict:
+    dictKey='price'
+    print(bookDict[dictKey])
 
 # for dictKey in bookDict:
 #         print(dictKey)
