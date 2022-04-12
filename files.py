@@ -1,5 +1,14 @@
-with open("../Data/newTest.txt") as f:
-   # perform file operations
+try:
+    print("We're opening a file...")
+    fileHandler = open("../Data/test.txt")
+    
+except:
+    print("We can't open a file. Sorry!")
+
+print("Program is finished. Bye!")
+
+# with open("../Data/newTest.txt") as f:
+#    # perform file operations
 
 
 
