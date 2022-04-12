@@ -16,17 +16,21 @@
 
 
 
-# ilmDict={'originalTitle':'Forever',
-#         'creator':'Matthew Miller',
-#         'rate':8.3,
-#         'description':'A 200-year-old man worksin the New York City Morgue trying to find a key to unlock the curse of his immortality.',
-#         'years':[2014,2015]
-#         }
+filmDict={'originalTitle':'Forever',
+        'creator':'Matthew Miller',
+        'rate':8.3,
+        'description':'A 200-year-old man worksin the New York City Morgue trying to find a key to unlock the curse of his immortality.',
+        'years':[2014,2015]
+        }
 
 # for key,value in filmDict.items():
 #     print("{}:{}".format(key,value))
 
-# sortedTuples = sorted(filmDict.items(), key=lambda x: x[0])
+sortedTuples = sorted(filmDict.items(), key=lambda x: x[0])
+
+for element in sortedTuples:
+    print(element)
+
 # print(sortedTuples)
 
 # filmDictSorted=dict(sortedTuples)
@@ -92,11 +96,11 @@
 
 
 
-users12=list(filter(lambda user: user['age'] >12, users))
+# users12=list(filter(lambda user: user['age'] >12, users))
 
-for user in users12:
-    for key,val in user.items():
-        print("{}:{}".format(key,val))
+# for user in users12:
+#     for key,val in user.items():
+#         print("{}:{}".format(key,val))
     
 
 

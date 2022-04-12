@@ -1,9 +1,9 @@
 def askPersonalInfo():
     while True:
-        firstName=input("Your first name:")
-        lastName=input("Your last name:")
-        yearBirth=input("Your year of birth:")
-        gender=input("Your gender (M,F):")
+        firstName=input("Input your first name:")
+        lastName=input("Input your last name:")
+        yearBirth=input("Input your year of birth:")
+        gender=input("Input your gender (M,F):")
         if firstName=="" or lastName=="" or yearBirth=="" or gender=="" or gender not in ('F','M'):
             print("Wrong data!")
         else:
@@ -13,9 +13,9 @@ def askAdditionalInfo(queryStr):
     infoInd=1
     infoList=[]
     while True:
-        infoName=input("Your {} {} name:".format(queryStr,infoInd))
+        infoName=input("Name of the {} #{}:".format(queryStr,infoInd))
         if infoName=="":
-            print("No info. Stop input")
+            print("No info. Input stopped.")
             break
         else:
             infoList.append(infoName)

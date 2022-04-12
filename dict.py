@@ -92,17 +92,28 @@ for dictKey in bookDict:
 # print(bookDict.get('page',0)) #0
 
 # print(bookDict)
+for dictKey, dicVal in bookDict.items():
+    print("{}:{}".format(dictKey,dicVal))
 
-# bookDict['price']=12
+bookDict['price']=12
+
+for dictKey, dicVal in bookDict.items():
+    print("{}:{}".format(dictKey,dicVal))
+
+
 # print(bookDict)
-
-
-
+# for dictKey, dicVal in bookDict.items():
+#     print("{}:{}".format(dictKey,dicVal))
 
 # bookDict['pagesN']=350
+
+
+# for dictKey, dicVal in bookDict.items():
+#     print("{}:{}".format(dictKey,dicVal))
+
 # print(bookDict)
 
-# infoType=input("What info do you want to know about book?")
+# infoType=input("What info do you want to know about the book?")
 
 # if infoType in bookDict:
 #         print(bookDict[infoType])
