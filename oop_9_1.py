@@ -10,6 +10,15 @@
 # class Student:
 #     pass
 
+# class Student:
+#     age=20
+#     name="Bob"
+
+# student1=Student()
+# student2=Student()
+
+# print(student1.name)
+
 class Student:
 
     spec="Computer science"
