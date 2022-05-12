@@ -25,8 +25,8 @@ class Person:
         print(self.showInfo())
         return f"{msgText}! I am {self.firstName}."
 
-person1=Person("Joe","Black",30)
-print(person1.showInfo())
+# person1=Person("Joe","Black",30)
+# print(person1.showInfo())
 
 
 
@@ -45,11 +45,19 @@ class Employee(Person):
     def changeAge(self, newAge):
         self._age=newAge
 
-# employee1=Employee("Joe","Black",30, 3000)
-# employee1.isRetiree()
+    def showEmployeeID(self):
+        self.__showID()
 
-# employee1.changeAge(65)
-# employee1.isRetiree()
+        #print(self.__personID)
+
+
+employee1=Employee("Joe","Black",30, 3000)
+employee1.isRetiree()
+
+employee1.showEmployeeID()
+
+employee1.changeAge(65)
+employee1.isRetiree()
 
 
 # employee1._age=20
@@ -62,7 +70,7 @@ class Employee(Person):
 #         self.firstName = firstName
 #         self.lastName = lastName
 
-#         #protecte properties
+#         #protected properties
 #         self._age = age
 
 #     # public methods
