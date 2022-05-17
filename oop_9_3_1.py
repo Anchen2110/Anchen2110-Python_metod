@@ -1,3 +1,126 @@
+import random
+from datetime import date
+class Person:
+
+    hobby="Cooking"
+
+    def __init__(self, firstName, lastName, age):
+        # public properties
+        self.firstName = firstName
+        self.lastName = lastName
+
+        #protecte properties
+        self._age = age
+
+        #private properties
+        self.__personID=random.randint(1,100)        
+
+    #private methods
+    def __showID(self):
+        print (self.__personID)
+    
+    # public methods
+    def getInfo(self):
+        self.__showID()
+        return f"Person first name -  {self.firstName}; last name - {self.lastName}; age - {self._age}."
+
+    def sayHi(self, msgText):
+        print(self.getInfo())
+        return f"{msgText}! I am {self.firstName}."
+
+    #static methods
+    @staticmethod
+    def sayGreetings():
+        print("Nice to meet you!")
+
+    #class methods
+    @classmethod
+    def setDefaultHobby(cls):
+        cls.hobby="Drawing"
+   
+    @classmethod
+    def basedOnBYear(cls,firstName, lastName, bYear):
+        personAge=date.today().year - bYear
+        return cls(firstName, lastName, personAge)
+
+    @classmethod
+    def basedOnStr(cls,strInf):
+        firstName, lastName,age = strInf.split(' ')
+        return cls(firstName, lastName,age)
+
+
+
+
+
+
+person1=Person("Joe","Black",30)
+print(person1.getInfo())
+
+person2=Person.basedOnBYear("Kate","Smith",2000)
+print(person2.getInfo())
+
+person3=Person.basedOnStr("Kate Smith 25")
+print(person3.getInfo())
+
+
+
+
+import random
+from datetime import date
+class Person:
+
+    hobby="Cooking"
+
+    def __init__(self, firstName, lastName, age):
+        # public properties
+        self.firstName = firstName
+        self.lastName = lastName
+
+        #protecte properties
+        self._age = age
+
+        #private properties
+        self.__personID=random.randint(1,100)        
+
+    #private methods
+    def __showID(self):
+        print (self.__personID)
+    
+    # public methods
+    def getInfo(self):
+        self.__showID()
+        return f"Person first name -  {self.firstName}; last name - {self.lastName}; age - {self._age}."
+
+    def sayHi(self, msgText):
+        print(self.getInfo())
+        return f"{msgText}! I am {self.firstName}."
+
+    #static methods
+    @staticmethod
+    def sayGreetings():
+        print("Nice to meet you!")
+
+    #class methods
+    @classmethod
+    def setDefaultHobby(cls):
+        cls.hobby="Drawing"
+   
+    @classmethod
+    def basedOnBYear(cls,firstName, lastName, bYear):
+        personAge=date.today().year - bYear
+        return cls(firstName, lastName, personAge)
+
+
+
+
+
+person1=Person("Joe","Black",30)
+print(person1.getInfo())
+
+person2=Person.basedOnBYear("Kate","Smith",2000)
+print(person2.getInfo())
+
+
 # import random
 # class Person:
 
