@@ -5,10 +5,10 @@ class Person:
         self.lastName = lastName
         self.age = age
 
-    def showInfo(self):
+    def getInfo(self):
         return f"Person first name -  {self.firstName}; last name - {self.lastName}; age - {self.age}."
 
-    def sayHi(self, msgText):
+    def getHi(self, msgText):
         return f"{msgText}! I am {self.firstName}."
 
 
@@ -26,10 +26,8 @@ class Person:
 #     spec="Computer Science"
 
 #     def isSuccessful(self,meanScore):
-#         if meanScore>=75:
-#             return True
-#         else:
-#             return False
+#         return True if meanScore>=75 else False
+    
 
 # student1=Student("Joe","Black",30)
 
@@ -69,18 +67,20 @@ class Student(Person):
         super().__init__(firstName, lastName, age)
         self.score = score
 
-    def showInfo(self):
-        return super().showInfo()+f"score - {self.score}"
+    def getInfo(self):
+        return super().getInfo()+f"score - {self.score}"
     
     def isSuccessful(self):
-        if self.score>=75:
-            return True
-        else:
-            return False
+        return True if self.score>=75 else False
+        # if self.score>=75:
+        #     return True
+        # else:
+        #     return False
 
 student1=Student("Joe","Black",30, 78)
 
-print(student1.showInfo())
+print(student1.getInfo())
+print(student1.isSuccessful())
 
 
 
