@@ -1,3 +1,32 @@
+def defineStudSuccess(name,score):
+    if score>=90:
+        print("{} has excellent level".format(name))
+    elif 75<=score<90:
+        print("{} has good level".format(name))
+    elif 60<=score<75:
+        print("{} has average level".format(name))
+    else:
+        print("{} has poor level".format(name))
+
+def definePupSuccess(name,score):
+    if score>=10:
+        print("{} has excellent level".format(name))
+    elif 7<=score<10:
+        print("{} has good level".format(name))
+    elif 4<=score<7:
+        print("{} has average level".format(name))
+    else:
+        print("{} has poor level".format(name))
+
+defineStudSuccess("Jane",78)
+defineStudSuccess("Bob",6)
+
+
+
+
+
+
+
 # myVar=1000
 # print(type(myVar))
 
@@ -19,38 +48,38 @@
 
 # print(student1.name)
 
-class Student:
+# class Student:
 
-    spec="Computer science"
+#     spec="Computer science"
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
-    def showInfo(self):
-        return f"Student {self.name} is {self.age} years old."
+#     def showInfo(self):
+#         return f"Student {self.name} is {self.age} years old."
 
-    def showMsg(self, msgText):
-        return f"Student {self.name} says '{msgText}'."
+#     def showMsg(self, msgText):
+#         return f"Student {self.name} says '{msgText}'."
 
-student1=Student("Bob",20)
-student2=Student("Jane", 18)
+# student1=Student("Bob",20)
+# student2=Student("Jane", 18)
 
-print(student1.showInfo())
-print(student1.showMsg("Hello!"))
+# print(student1.showInfo())
+# print(student1.showMsg("Hello!"))
 
-print(student2.showInfo())
-print(student2.showMsg("Hi!"))
+# print(student2.showInfo())
+# print(student2.showMsg("Hi!"))
 
-print("Student's 1 info:")
-print(student1.name)
-print(student1.age)
-print(student1.spec)
+# print("Student's 1 info:")
+# print(student1.name)
+# print(student1.age)
+# print(student1.spec)
 
-print("Student's 2 info:")
-print(student2.name)
-print(student2.age)
-print(student1.spec)
+# print("Student's 2 info:")
+# print(student2.name)
+# print(student2.age)
+# print(student1.spec)
 
 
 # student1.sayHello()
