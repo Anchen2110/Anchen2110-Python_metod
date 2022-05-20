@@ -1,0 +1,30 @@
+import random
+
+class Person:
+    def __init__(self, firstName, lastName, age):
+        # public properties
+        self.firstName = firstName
+        self.lastName = lastName
+        self.age = age
+
+        #private properties
+        self.__personID=random.randint(1,100)        
+
+    #private methods
+    def __showID(self):
+        print (self.__personID)
+    
+    # public methods
+    def getInfo(self):
+        self.__showID()
+        return f"Person first name -  {self.firstName}; last name - {self.lastName}; age - {self.age}."
+
+    def getHi(self, msgText):
+        print(self.getInfo())
+        return f"{msgText}! I am {self.firstName}."
+
+person1=Person("Joe","Black",30)
+print(person1.getInfo())
+
+# print(person1.__personID)
+# person1.__showID()
