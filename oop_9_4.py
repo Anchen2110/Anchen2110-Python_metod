@@ -1,36 +1,35 @@
 import random
 
+# class Book:
+#     def __init__(self, title, author, pages,feedbacksN):
+#         self.title = title
+#         self.author = author
+#         self.pages = pages
+#         self.feedbacksN=feedbacksN
 
-class Book:
-    def __init__(self, title, author, pages,feedbacksN):
-        self.title = title
-        self.author = author
-        self.pages = pages
-        self.feedbacksN=feedbacksN
+#     def __str__(self):
+#         return f"Title: {self.title}, author: {self.author}, pages: {self.pages}, feedbacksN:{self.feedbacksN}"
 
-    def __str__(self):
-        return f"Title: {self.title}, author: {self.author}, pages: {self.pages}, feedbacksN:{self.feedbacksN}"
-
-    def __eq__(self, otherObj):
-        if self.author==otherObj.author and self.title==otherObj.title:
-            return True
-        else:
-            return False
+#     def __eq__(self, otherObj):
+#         if self.author==otherObj.author and self.title==otherObj.title:
+#             return True
+#         else:
+#             return False
     
-    def __gt__(self, otherObj):
-        if self.pages>otherObj.pages:
-            return True
-        else:
-            return False
-    def __getitem__(self,ind):
-        if 0<=ind<=11:
-            return self.feedbacksN[ind]
-        else:
-            return -1
+#     def __gt__(self, otherObj):
+#         if self.pages>otherObj.pages:
+#             return True
+#         else:
+#             return False
+#     def __getitem__(self,ind):
+#         if 0<=ind<=11:
+#             return self.feedbacksN[ind]
+#         else:
+#             return -1
     
-PythonFeedbacks=[random.randint(50,300) for i in range(12)]
-book1=Book("Python Crash Course","Eric Matthes", 624,PythonFeedbacks)
-print(book1[2]) #265
+# PythonFeedbacks=[random.randint(50,300) for i in range(12)]
+# book1=Book("Python Crash Course","Eric Matthes", 624,PythonFeedbacks)
+# print(book1[2]) #265
 
 # class Book:
 #     def __init__(self, title, author, pages):
@@ -76,7 +75,7 @@ print(book1[2]) #265
 # book2=Book("JavaScript: The Good Parts","Douglas Crockford", 170)
 
 # print(book1==book2) #False
-#print(book1)
+# print(book1)
 
 # class Class1:
 #     def __new__(cls):
@@ -87,7 +86,7 @@ print(book1[2]) #265
 #         print("Hi! I am __init__ magic method.")
         
 
-# book1=Class1()
+# obj1=Class1()
 
 
 # class Book:
