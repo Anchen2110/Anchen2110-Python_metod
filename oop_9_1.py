@@ -1,25 +1,50 @@
-def defineStudSuccess(name,score):
-    if score>=90:
-        print("{} has excellent level".format(name))
-    elif 75<=score<90:
-        print("{} has good level".format(name))
-    elif 60<=score<75:
-        print("{} has average level".format(name))
-    else:
-        print("{} has poor level".format(name))
+userLogs=['Admin123','superUSER','GOODstudent']
+userBYears=[2000, 2010, 2005]
 
-def definePupSuccess(name,score):
-    if score>=10:
-        print("{} has excellent level".format(name))
-    elif 7<=score<10:
-        print("{} has good level".format(name))
-    elif 4<=score<7:
-        print("{} has average level".format(name))
-    else:
-        print("{} has poor level".format(name))
+def listMaker1(myList):
+    result=[]
+    for item in myList:
+        result.append(item.lower())
+    return result
 
-defineStudSuccess("Jane",78)
-defineStudSuccess("Bob",6)
+
+def listMaker2(myList):
+    result=[]
+    for item in myList:
+        result.append(2022-item)
+    return result
+
+newList1=listMaker1(userBYears)
+newList2=listMaker2(userLogs)
+
+newList1=listMaker1(userLogs)
+newList2=listMaker2(userBYears)
+
+print(newList1)
+print(newList2)
+
+# def defineStudSuccess(name,score):
+#     if score>=90:
+#         print("{} has excellent level".format(name))
+#     elif 75<=score<90:
+#         print("{} has good level".format(name))
+#     elif 60<=score<75:
+#         print("{} has average level".format(name))
+#     else:
+#         print("{} has poor level".format(name))
+
+# def definePupSuccess(name,score):
+#     if score>=10:
+#         print("{} has excellent level".format(name))
+#     elif 7<=score<10:
+#         print("{} has good level".format(name))
+#     elif 4<=score<7:
+#         print("{} has average level".format(name))
+#     else:
+#         print("{} has poor level".format(name))
+
+# defineStudSuccess("Jane",78)
+# defineStudSuccess("Bob",6)
 
 
 

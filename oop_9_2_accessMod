@@ -11,20 +11,23 @@ class Person:
         self.__personID=random.randint(1,100)        
 
     #private methods
-    def __showID(self):
-        print (self.__personID)
+    def __getID(self):
+        return f"{self.__personID}\n"
+        #print (self.__personID)
     
     # public methods
     def getInfo(self):
-        self.__showID()
-        return f"Person first name -  {self.firstName}; last name - {self.lastName}; age - {self.age}."
+        return f"{self.__getID()}Person first name -  {self.firstName}; last name - {self.lastName}; age - {self.age}."
 
     def getHi(self, msgText):
-        print(self.getInfo())
-        return f"{msgText}! I am {self.firstName}."
+        personInf=self.getInfo()
+        return f"{personInf}\n{msgText}! I am {self.firstName}."
 
 person1=Person("Joe","Black",30)
 print(person1.getInfo())
 
+person1.__personID=100
+print(person1.getInfo())
+
 # print(person1.__personID)
-# person1.__showID()
+
