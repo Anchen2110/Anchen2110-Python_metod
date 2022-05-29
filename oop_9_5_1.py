@@ -24,7 +24,7 @@ class UserPlayer:
     
     def updateWallet(self,coins=0):
         self.__wallet=self.__walletSetter(coins)
-        #self.__wallet(coins)
+        
 
     def showWallet(self):
         print(f"{self.name}! You have {self.__wallet} coins now.")
@@ -36,7 +36,6 @@ class UserPlayer:
 # user1.showWallet()
 
 import random
-
 
 class BotPlayer:
     def __init__(self):
