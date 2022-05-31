@@ -1,16 +1,41 @@
 class myDecorator:
     def __init__(self,fn):
         self.fn=fn
+        self.__memoryCall=[]
     
     def __call__(self, num1, num2):
+        self.__memoryCall.append(self.fn(num1, num2)**2)
         return self.fn(num1, num2)**2
+
+    def showMemoryState(self):
+        print(f"Current memory state:{self.__memoryCall}")
 	
 
 @myDecorator
 def addNums(x,y):
     return x+y
 
-print(addNums(2,3)) #25
+print(addNums(2,3))
+addNums.showMemoryState()
+print(addNums(3,3))
+addNums.showMemoryState()
+print(addNums(4,3))
+addNums.showMemoryState()
+
+
+# class myDecorator:
+#     def __init__(self,fn):
+#         self.fn=fn
+    
+#     def __call__(self, num1, num2):
+#         return self.fn(num1, num2)**2
+	
+
+# @myDecorator
+# def addNums(x,y):
+#     return x+y
+
+# print(addNums(2,3)) #25
 
 
 
