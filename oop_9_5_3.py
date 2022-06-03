@@ -2,7 +2,9 @@ class Product:
     def __init__(self, name, price, discountPercentage=25):
         self.name = name
         self.price = price
-        self.__discountPercentage = discountPercentage
+        self.__discountPercentage =discountPercentage*100 if 0<discountPercentage<1 else discountPercentage
+
+        # self.__discountPercentage = discountPercentage
     
     def getDiscount(self):
         return self.__discountPercentage
@@ -39,6 +41,10 @@ print(item1.discountPercentage)
 
 item1.discountPercentage=85
 print(item1.discountPercentage)
+
+item2=Product("Pure Apple Juice", 28, 0.5)
+item2.showInfo()
+print(item2.discountPercentage)
 
 
 
