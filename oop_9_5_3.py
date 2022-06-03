@@ -3,9 +3,8 @@ class Product:
         self.name = name
         self.price = price
         self.__discountPercentage =discountPercentage*100 if 0<discountPercentage<1 else discountPercentage
-
-        # self.__discountPercentage = discountPercentage
-    
+       
+        
     def getDiscount(self):
         return self.__discountPercentage
 
@@ -17,34 +16,85 @@ class Product:
         else:
             print(f"Discoun value less than 10% or greater than 75% is not possible!")
     
+    def delDiscount(self):
+        print("It is impossible to delete this property!")
+
+   
     def showInfo(self):
         print (f"name:{self.name}, price with discount:{self.price*(1-self.getDiscount()/100)} grn.")
     
     def toUSD(self,usdExchRate):
         return self.price*(1-self.getDiscount())/usdExchRate
 
+    
+
     discountPercentage = property(
         fget=getDiscount,
-        fset=setDiscount
-    )   
+        fset=setDiscount,
+        fdel=delDiscount, 
+        doc="Product discount property."
+
+    ) 
+
+
  
-item1=Product("Lipton Peach Iced", 42, 30)
-item1.showInfo()
+item1=Product("Lipton Peach Iced", 42, "Super iced tea!",30)
+del item1.discountPercentage
+help(Product.discountPercentage)
 
-print(item1.discountPercentage)
+# print(item1.desc)
+# del item1.desc
 
-item1.discountPercentage=0.25
-print(item1.discountPercentage)
 
-item1.discountPercentage=60
-print(item1.discountPercentage)
 
-item1.discountPercentage=85
-print(item1.discountPercentage)
 
-item2=Product("Pure Apple Juice", 28, 0.5)
-item2.showInfo()
-print(item2.discountPercentage)
+# class Product:
+#     def __init__(self, name, price, discountPercentage=25):
+#         self.name = name
+#         self.price = price
+#         self.__discountPercentage =discountPercentage*100 if 0<discountPercentage<1 else discountPercentage
+
+#         # self.__discountPercentage = discountPercentage
+    
+#     def getDiscount(self):
+#         return self.__discountPercentage
+
+#     def setDiscount(self,value):
+#         if 0.1<=value<=0.75:
+#             self.__discountPercentage=value*100
+#         elif 10<=value<=75:
+#              self.__discountPercentage=value
+#         else:
+#             print(f"Discoun value less than 10% or greater than 75% is not possible!")
+    
+#     def showInfo(self):
+#         print (f"name:{self.name}, price with discount:{self.price*(1-self.getDiscount()/100)} grn.")
+    
+#     def toUSD(self,usdExchRate):
+#         return self.price*(1-self.getDiscount())/usdExchRate
+
+#     discountPercentage = property(
+#         fget=getDiscount,
+#         fset=setDiscount
+#     )   
+ 
+# item1=Product("Lipton Peach Iced", 42, 30)
+# item1.showInfo()
+
+# print(item1.discountPercentage)
+
+# item1.discountPercentage=0.25
+# print(item1.discountPercentage)
+
+# item1.discountPercentage=60
+# print(item1.discountPercentage)
+
+# item1.discountPercentage=85
+# print(item1.discountPercentage)
+
+# item2=Product("Pure Apple Juice", 28, 0.5)
+# item2.showInfo()
+# print(item2.discountPercentage)
 
 
 
