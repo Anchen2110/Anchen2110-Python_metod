@@ -1,9 +1,40 @@
-class WalletFunctor:
-    def __init__(self, startCoins=100): 
-        self.__startCoins = startCoins
+class callCounter:
+    def __init__(self, n=0):
+        self.__n = n
+
+    def __call__(self):
+        self.__n+=1
+        return self.__n
+
+class Game:
+    def __init__(self, playerName):
+        self.playerName=playerName
+        self.__gameCounter=callCounter()
+        self.__Ncalls=self.__gameCounter()
+
+    def startGame(self):
+        self.__Ncalls=self.__gameCounter()
+
+    def showInfo(self):
+        print(f"User {self.playerName} has launched the game {self.__Ncalls} times already!")
+
+
+user1=Game("Bob")
+
+for i in range(5):
+    user1.startGame()
+    user1.showInfo()
+
+
+
+
+
+# class WalletFunctor:
+#     def __init__(self, startCoins=100): 
+#         self.__startCoins = startCoins
     
-    def __call__(self, coins=0):
-        return self.__startCoins+coins
+#     def __call__(self, coins=0):
+#         return self.__startCoins+coins
 
 # userWallet=WalletFunctor()
 # print(f"Start state of user wallet: {userWallet()} coins")
@@ -16,18 +47,18 @@ class WalletFunctor:
 # print(f"State of user bot after updating to 20 coins: {botWallet(20)} coins")
 
 
-class UserPlayer:
-    def __init__(self, name):
-        self.name=name
-        self.__walletSetter=WalletFunctor()
-        self.__wallet=self.__walletSetter()
+# class UserPlayer:
+#     def __init__(self, name):
+#         self.name=name
+#         self.__walletSetter=WalletFunctor()
+#         self.__wallet=self.__walletSetter()
     
-    def updateWallet(self,coins=0):
-        self.__wallet=self.__walletSetter(coins)
+#     def updateWallet(self,coins=0):
+#         self.__wallet=self.__walletSetter(coins)
         
 
-    def showWallet(self):
-        print(f"{self.name}! You have {self.__wallet} coins now.")
+#     def showWallet(self):
+#         print(f"{self.name}! You have {self.__wallet} coins now.")
 
 
 # user1=UserPlayer("Joe")
@@ -37,24 +68,24 @@ class UserPlayer:
 
 import random
 
-class BotPlayer:
-    def __init__(self):
-        self.__name=random.choice(["SuperBot","MegaBot","Bot-player"])
-        self.__walletSetter=WalletFunctor(50)
-        self.__wallet=self.__walletSetter()
+# class BotPlayer:
+#     def __init__(self):
+#         self.__name=random.choice(["SuperBot","MegaBot","Bot-player"])
+#         self.__walletSetter=WalletFunctor(50)
+#         self.__wallet=self.__walletSetter()
     
-    def updateWallet(self,coins=0):
-        self.__wallet=self.__walletSetter(coins)
-        #self.__wallet(coins)
+#     def updateWallet(self,coins=0):
+#         self.__wallet=self.__walletSetter(coins)
+#         #self.__wallet(coins)
 
-    def showWallet(self):
-        print(f"{self.__name}! You have {self.__wallet} coins now.")
+#     def showWallet(self):
+#         print(f"{self.__name}! You have {self.__wallet} coins now.")
 
 
-bot1=BotPlayer()
-bot1.showWallet() 
-bot1.updateWallet(20)
-bot1.showWallet()  
+# bot1=BotPlayer()
+# bot1.showWallet() 
+# bot1.updateWallet(20)
+# bot1.showWallet()  
 
 
 # class UserPlayer:
