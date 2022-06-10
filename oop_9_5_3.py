@@ -1,48 +1,4 @@
-class Product:
-    def __init__(self, name, price, discountPercentage=25, description="Cool product!"):
-        self.name = name
-        self.price = price
-        self.__discountPercentage =discountPercentage*100 if 0<discountPercentage<1 else discountPercentage
-        self._description=description
-
-    @property
-    def description(self):
-        return self._description
-
-    @description.setter
-    def description(self, value):
-        print("This is protected property - read only!")
-
-       
-    @property 
-    def discountPercentage(self):
-        return self.__discountPercentage
-
-    @discountPercentage.setter
-    def discountPercentage(self,value):
-        if 0.1<=value<=0.75:
-            self.__discountPercentage=value*100
-        elif 10<=value<=75:
-             self.__discountPercentage=value
-        else:
-            print(f"Discoun value less than 10% or greater than 75% is not possible!")
-
-    @discountPercentage.deleter
-    def discountPercentage(self):
-        print("It is impossible to delete this property!")
-
-    def showInfo(self):
-        print (f"name:{self.name}, price with discount:{self.price*(1-self.getDiscount()/100)} grn.")
-    
-    def toUSD(self,usdExchRate):
-        return self.price*(1-self.getDiscount())/usdExchRate
-
-
- 
-item1=Product("Lipton Peach Iced", 42, 30)
-print(item1.description)
-item1.description="None"
-
+from ast import Delete
 
 
 class Product:
@@ -66,18 +22,104 @@ class Product:
 
     @discountPercentage.deleter
     def discountPercentage(self):
-        print("It is impossible to delete this property!")
+        #print("It is impossible to delete this property!")
+        del self.__discountPercentage
 
     def showInfo(self):
-        print (f"name:{self.name}, price with discount:{self.price*(1-self.getDiscount()/100)} grn.")
+        print (f"name:{self.name}, price with discount:{self.price*(1-self.__discountPercentage/100)} grn.")
     
     def toUSD(self,usdExchRate):
-        return self.price*(1-self.getDiscount())/usdExchRate
+        return self.price*(1-self.__discountPercentage)/usdExchRate
 
 
  
 item1=Product("Lipton Peach Iced", 42, 30)
+item2=Product("Coffee", 15, 25)
 del item1.discountPercentage
+
+print(item2.discountPercentage)
+print(item1.discountPercentage)
+
+# class Product:
+#     def __init__(self, name, price, discountPercentage=25, description="Cool product!"):
+#         self.name = name
+#         self.price = price
+#         self.__discountPercentage =discountPercentage*100 if 0<discountPercentage<1 else discountPercentage
+#         self._description=description
+
+#     @property
+#     def description(self):
+#         return self._description
+
+#     @description.setter
+#     def description(self, value):
+#         print("This is protected property - read only!")
+
+       
+#     @property 
+#     def discountPercentage(self):
+#         return self.__discountPercentage
+
+#     @discountPercentage.setter
+#     def discountPercentage(self,value):
+#         if 0.1<=value<=0.75:
+#             self.__discountPercentage=value*100
+#         elif 10<=value<=75:
+#              self.__discountPercentage=value
+#         else:
+#             print(f"Discoun value less than 10% or greater than 75% is not possible!")
+
+#     @discountPercentage.deleter
+#     def discountPercentage(self):
+#         print("It is impossible to delete this property!")
+
+#     def showInfo(self):
+#         print (f"name:{self.name}, price with discount:{self.price*(1-self.getDiscount()/100)} grn.")
+    
+#     def toUSD(self,usdExchRate):
+#         return self.price*(1-self.getDiscount())/usdExchRate
+
+
+ 
+# item1=Product("Lipton Peach Iced", 42, 30)
+# print(item1.description)
+# item1.description="None"
+
+
+
+# class Product:
+#     def __init__(self, name, price, discountPercentage=25):
+#         self.name = name
+#         self.price = price
+#         self.__discountPercentage =discountPercentage*100 if 0<discountPercentage<1 else discountPercentage
+       
+#     @property 
+#     def discountPercentage(self):
+#         return self.__discountPercentage
+
+#     @discountPercentage.setter
+#     def discountPercentage(self,value):
+#         if 0.1<=value<=0.75:
+#             self.__discountPercentage=value*100
+#         elif 10<=value<=75:
+#              self.__discountPercentage=value
+#         else:
+#             print(f"Discoun value less than 10% or greater than 75% is not possible!")
+
+#     @discountPercentage.deleter
+#     def discountPercentage(self):
+#         print("It is impossible to delete this property!")
+
+#     def showInfo(self):
+#         print (f"name:{self.name}, price with discount:{self.price*(1-self.getDiscount()/100)} grn.")
+    
+#     def toUSD(self,usdExchRate):
+#         return self.price*(1-self.getDiscount())/usdExchRate
+
+
+ 
+# item1=Product("Lipton Peach Iced", 42, 30)
+# del item1.discountPercentage
 
 
 # class Product:
@@ -146,7 +188,7 @@ del item1.discountPercentage
 #         elif 10<=value<=75:
 #              self.__discountPercentage=value
 #         else:
-#             print(f"Discoun value less than 10% or greater than 75% is not possible!")
+#             print(f"Discount value less than 10% or greater than 75% is not possible!")
     
 #     def showInfo(self):
 #         print (f"name:{self.name}, price with discount:{self.price*(1-self.getDiscount()/100)} grn.")
@@ -199,7 +241,7 @@ del item1.discountPercentage
 #         if 0.1<=value<=0.75:
 #             self._discountPercentage=value*100
 #         else:
-#             print(f"Discoun value less than 10% or greater than 75% is not possible!")
+#             print(f"Discount value less than 10% or greater than 75% is not possible!")
 
     
 #     def showInfo(self):
@@ -212,7 +254,7 @@ del item1.discountPercentage
 # item1=Product("Lipton Peach Iced", 42, 30)
 # item1.showInfo()
 
-# # item1.setDiscount(0.8)
+# item1.setDiscount(0.8)
 
 # item1._discountPercentage=90
 # item1.showInfo()
