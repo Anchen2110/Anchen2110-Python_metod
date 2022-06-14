@@ -1,3 +1,94 @@
+class StrDescriptor:
+    def __init__(self, minLen, name=""):
+        self.name=name
+        self.minLen=minLen
+  
+    def __get__(self, obj, objtype):
+        return self.name
+  
+    def __set__(self, obj, value):
+        if not isinstance(value, str):
+            print('The value must be a string!')
+
+        elif len(value) == 0:
+            print('The value cannot be empty!')
+
+        elif len(value) < self.minLen:
+            print('Too short value!')
+
+        self.name = value
+
+class User:
+    firstName=StrDescriptor(3)
+    lastName=StrDescriptor(4)
+
+    def __init__(self, firstName, lastName):
+        self.firstName = firstName
+        self.lastName = lastName
+
+
+user1=User("Joe", "Black")
+print(f"User1: {user1.firstName} {user1.lastName}")
+
+user1.firstName=""
+user1.firstName="AB"
+
+user1.lastName=""
+user1.lastName="ABC"
+
+user2=User("AB", "ABC")
+
+
+# class User:
+#     def __init__(self, firstName, lastName):
+#         self.__firstName = firstName
+#         self.__lastName = lastName
+
+#     @property
+#     def firstName(self):
+#         return self.__firstName
+
+#     @firstName.setter
+#     def firstName(self, value):
+#         if not isinstance(value, str):
+#             print('The first name must be a string!')
+
+#         elif len(value) == 0:
+#             print('The first name cannot be empty!')
+
+#         elif len(value) < 3:
+#             print('Too short value for the first name!')
+
+#         self.__firstName = value
+    
+#     @property
+#     def lastName(self):
+#         return self.__lastName
+
+#     @lastName.setter
+#     def lastName(self, value):
+#         if not isinstance(value, str):
+#             print('The last name must be a string!')
+
+#         elif len(value) == 0:
+#             print('The last name cannot be empty!')
+
+#         elif len(value) < 4:
+#             print('Too short value for the last name!')
+
+#         self.__lastName = value
+
+# user1=User("Joe", "Black")
+# print(f"User1: {user1.firstName} {user1.lastName}")
+
+# user1.firstName=""
+# user1.firstName="AB"
+
+# user1.lastName=""
+# user1.lastName="ABC"
+
+
+
 # class MyDescriptor1:  
 #     def __init__(self,name=""):
 #         print("Descriptor's __init__ was started...")
