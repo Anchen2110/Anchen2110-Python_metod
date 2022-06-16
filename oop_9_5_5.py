@@ -16,7 +16,8 @@ class StrDescriptor:
         elif len(value) < self.minLen:
             print('Too short value!')
 
-        self.name = value
+        else:
+            self.name = value
 
 class User:
     firstName=StrDescriptor(3)
@@ -75,8 +76,9 @@ user2=User("AB", "ABC")
 
 #         elif len(value) < 4:
 #             print('Too short value for the last name!')
-
-#         self.__lastName = value
+        
+#         else:
+#             self.__lastName = value
 
 # user1=User("Joe", "Black")
 # print(f"User1: {user1.firstName} {user1.lastName}")
