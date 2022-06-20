@@ -145,11 +145,11 @@ print(obj2.price)
     #     print("'Hello' from__call__()!")
 
 
-# class MyMetaClass1(type):
-#     pass
+class MyMetaClass1(type):
+    pass
 
-# class MyClass1(metaclass=MyMetaClass1):
-#     pass
+class MyClass1(metaclass=MyMetaClass1):
+    pass
 
-# print(type(MyMetaClass1))
-# print(type(MyClass1))
+print(type(MyMetaClass1))
+print(type(MyClass1))
