@@ -52,6 +52,7 @@ class Book:
 # ])
 
 # print(purchase2)
+print(type(MyClass1))
 
 def calculateTotalPrice(objs:List[Item]):
     sum=0
